@@ -1,5 +1,6 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css'
 import Menu from './components/common/Menu'
 import Footer from './components/common/Footer'
 import Inicio from './components/pages/Inicio'
@@ -12,7 +13,7 @@ function App() {
     <>
       <Menu></Menu>
       {/* <Inicio></Inicio> */}
-      {/* <Administrador></Administrador> */}
+      <Administrador></Administrador>
       {/* <Error404></Error404> */}
       <Footer></Footer>
     </>

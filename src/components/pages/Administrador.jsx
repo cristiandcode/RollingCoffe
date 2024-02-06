@@ -7,7 +7,6 @@ const Administrador = () => {
       <div className="d-flex justify-content-between align-items-center mt-5">
         <h1 className="display-4 ">Productos disponibles</h1>
         <Button variant="primary">
-          agregar
           <i className="bi bi-file-earmark-plus"></i>
         </Button>
       </div>
