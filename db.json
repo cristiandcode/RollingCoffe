@@ -9,6 +9,16 @@
             "imagen":"https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "disponibilidad": true,
             "id":"1"
+        },
+        {
+            "nombreProducto": "Té",
+            "precio": 300,
+            "categoria": "Infusiones",
+            "descripcion-breve":"té rico",
+            "descripcion-amplia": "bebida de café concentrada y aromática que se prepara haciendo pasar agua caliente a alta presión por granos de café muy finamente molidos.",
+            "imagen":"https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "disponibilidad": true,
+            "id":"2"
         }
     ],
     "usuarios":[
