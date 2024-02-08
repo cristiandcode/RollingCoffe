@@ -1,9 +1,25 @@
 import { Button, Table } from "react-bootstrap";
 import ItemProducto from "./producto/ItemProducto";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { leerProductosAPI } from "../../helpers/queries";
 
 
 const Administrador = () => {
+const [productos, setProductos] = useState([]);
+
+useEffect(()=>{
+  traerProductos();
+},[])
+
+const traerProductos = async()=>{
+  try {
+    await leerProductosAPI()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
   return (
     <section className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
