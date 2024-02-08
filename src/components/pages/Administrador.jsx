@@ -14,7 +14,8 @@ useEffect(()=>{
 
 const traerProductos = async()=>{
   try {
-    await leerProductosAPI()
+     const listaProductosAPI = await leerProductosAPI();
+     setProductos(listaProductosAPI);
   } catch (error) {
     console.log(error)
   }
@@ -41,10 +42,9 @@ const traerProductos = async()=>{
           </tr>
         </thead>
         <tbody>
-          <ItemProducto></ItemProducto>
-          <ItemProducto></ItemProducto>
-          <ItemProducto></ItemProducto>
-          <ItemProducto></ItemProducto>
+          {
+            productos.map((producto)=><ItemProducto key={producto.id} producto={producto}></ItemProducto>)
+          }
         </tbody>
       </Table>
     </section>
