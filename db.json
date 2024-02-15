@@ -37,6 +37,15 @@
       "categoria": "dulce",
       "descripcion_breve": "una torta rica",
       "descripcion_amplia": "dlkfjsldk fslksdjs lskdjskdj fskd sdkjfsldkfjslkdfjlskdjf"
+    },
+    {
+      "id": "21d4",
+      "nombreProducto": "medialuna",
+      "precio": "240",
+      "imagen": "https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg",
+      "categoria": "dulce",
+      "descripcion_breve": "dfssssssssssssss sssssssss",
+      "descripcion_amplia": "sdddddddddddddddddd ssssssssssssssssssssss ssssssssssssssssss"
     }
   ],
   "usuarios": [
