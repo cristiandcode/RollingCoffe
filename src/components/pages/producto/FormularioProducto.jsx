@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { crearProductoAPI } from "../../../helpers/queries";
 import Swal from "sweetalert2";
 
-const FormularioProducto = () => {
+const FormularioProducto = ({editar, titulo}) => {
   const {
     register,
     handleSubmit,
@@ -12,28 +12,34 @@ const FormularioProducto = () => {
   } = useForm();
 
   const productoValidado = async(producto) => {
-    console.log(producto);
-    const respuesta = await crearProductoAPI(producto);
-    if(respuesta.status === 201){
-      //mensaje para el usuario
-      Swal.fire({
-        title: "Producto creado",
-        text: `El producto: ${producto.nombreProducto} fue creado correctamente`,
-        icon: "success"
-      });
-      reset();
+    if(editar){
+      //agregar la logica para editar el producto con la api
     }else{
-      Swal.fire({
-        title: "Ocurrio un error",
-        text: "Intente crear este producto en unos minutos",
-        icon: "error"
-      });
+      console.log(producto);
+      //Esta es la logica cuando quiero crear un producto
+      const respuesta = await crearProductoAPI(producto);
+      if(respuesta.status === 201){
+        //mensaje para el usuario
+        Swal.fire({
+          title: "Producto creado",
+          text: `El producto: ${producto.nombreProducto} fue creado correctamente`,
+          icon: "success"
+        });
+        reset();
+      }else{
+        Swal.fire({
+          title: "Ocurrio un error",
+          text: "Intente crear este producto en unos minutos",
+          icon: "error"
+        });
+      }
     }
+    
   };
 
   return (
     <section className="container mainSection">
-      <h1 className="display-4 mt-5">Nuevo producto</h1>
+      <h1 className="display-4 mt-5">{titulo}</h1>
       <hr />
       <Form className="my-4" onSubmit={handleSubmit(productoValidado)}>
         <Form.Group className="mb-3" controlId="formNombreProdcuto">
