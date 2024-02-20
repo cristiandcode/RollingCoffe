@@ -1,31 +1,31 @@
 {
   "productos": [
     {
-      "id": "21d4",
       "nombreProducto": "medialuna",
-      "precio": "240",
+      "precio": "700",
       "imagen": "https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg",
       "categoria": "Dulce",
       "descripcion_breve": "dfssssssssssssss sssssssss",
-      "descripcion_amplia": "sdddddddddddddddddd ssssssssssssssssssssss ssssssssssssssssss"
+      "descripcion_amplia": "sdddddddddddddddddd ssssssssssssssssssssss ssssssssssssssssss",
+      "id": "21d4"
     },
     {
-      "id": "c4ac",
       "nombreProducto": "café",
-      "precio": "1200",
+      "precio": "1400",
       "imagen": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg",
       "categoria": "Infusiones",
       "descripcion_breve": "sdfhsd fksjdhfksjdf",
-      "descripcion_amplia": "dkjhgsdf skdjfhskjdfhsdjsjkd sssssssssssss sssssssssssssssss"
+      "descripcion_amplia": "bebida de café concentrada y aromática que se prepara haciendo pasar agua caliente a alta presión por granos de café muy finamente molidos.",
+      "id": "c4ac"
     },
     {
-      "id": "382b",
       "nombreProducto": "brownie",
       "precio": "780",
       "imagen": "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg",
       "categoria": "Dulce",
-      "descripcion_breve": "fgkdjfg ldddddddddd kfkfffff",
-      "descripcion_amplia": "dfggggggggggd sssssssssssssssssssssdddddddddddddddd"
+      "descripcion_breve": "brownie rico",
+      "descripcion_amplia": "dfggggggggggd sssssssssssssssssssssdddddddddddddddd",
+      "id": "382b"
     },
     {
       "id": "a49e",

@@ -54,3 +54,20 @@ export const borrarProductoAPI = async(id)=>{
         console.log(error)
     }
 }
+
+//PUT
+export const editarProductoAPI = async(id, producto) =>{
+    try {
+        const respuesta = await fetch(`${URI_PRODUCTOS}/${id}`,{
+            method: "PUT",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify(producto)
+        })
+        console.log(respuesta);
+        return respuesta;
+    } catch (error) {
+        console.log(error)
+    }
+}
