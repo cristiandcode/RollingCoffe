@@ -1,26 +1,6 @@
 {
   "productos": [
     {
-      "nombreProducto": "café",
-      "precio": 1000,
-      "categoria": "Infusiones",
-      "descripcion_breve": "cafe rico",
-      "descripcion_amplia": "bebida de café concentrada y aromática que se prepara haciendo pasar agua caliente a alta presión por granos de café muy finamente molidos.",
-      "imagen": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "disponibilidad": true,
-      "id": "1"
-    },
-    {
-      "nombreProducto": "Té",
-      "precio": 300,
-      "categoria": "Infusiones",
-      "descripcion_breve": "té rico",
-      "descripcion_amplia": "bebida de café concentrada y aromática que se prepara haciendo pasar agua caliente a alta presión por granos de café muy finamente molidos.",
-      "imagen": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "disponibilidad": true,
-      "id": "2"
-    },
-    {
       "id": "21d4",
       "nombreProducto": "medialuna",
       "precio": "240",
@@ -28,6 +8,33 @@
       "categoria": "dulce",
       "descripcion_breve": "dfssssssssssssss sssssssss",
       "descripcion_amplia": "sdddddddddddddddddd ssssssssssssssssssssss ssssssssssssssssss"
+    },
+    {
+      "id": "c4ac",
+      "nombreProducto": "café",
+      "precio": "1200",
+      "imagen": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg",
+      "categoria": "Infusiones",
+      "descripcion_breve": "sdfhsd fksjdhfksjdf",
+      "descripcion_amplia": "dkjhgsdf skdjfhskjdfhsdjsjkd sssssssssssss sssssssssssssssss"
+    },
+    {
+      "id": "382b",
+      "nombreProducto": "brownie",
+      "precio": "780",
+      "imagen": "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg",
+      "categoria": "dulce",
+      "descripcion_breve": "fgkdjfg ldddddddddd kfkfffff",
+      "descripcion_amplia": "dfggggggggggd sssssssssssssssssssssdddddddddddddddd"
+    },
+    {
+      "id": "a49e",
+      "nombreProducto": "te verde",
+      "precio": "700",
+      "imagen": "https://img.freepik.com/foto-gratis/placa-madera-hoja-objeto-alimentacion-saludable_1172-451.jpg",
+      "categoria": "Infusiones",
+      "descripcion_breve": "Una bebida de origen Chino",
+      "descripcion_amplia": "Se deriva de las hojas de la planta Camellia sinensis y es apreciado tanto por su sabor refrescante como por sus innumerables beneficios para la salud, lo que lo convierte en una elección cada vez más popular."
     }
   ],
   "usuarios": [

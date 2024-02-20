@@ -79,8 +79,8 @@ const FormularioProducto = () => {
               ...register("imagen",{
                 required: "La imagen es obligatoria",
                 pattern:{
-                  value: /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/,
-                  message: "Debe ingresar una URL valida (jpg|gif|png)"
+                  value: /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|gif|png)/,
+                  message: "Debe ingresar una URL valida (jpg|jpeg|gif|png)"
                 }
               })
             }
