@@ -4,7 +4,7 @@ import { login } from "../../helpers/queries";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = ({setUsuarioLogueado}) => {
   const {
     register,
     handleSubmit,
@@ -20,6 +20,8 @@ const Login = () => {
         text: `El usuario ${usuario.email} fue logueado correctamente`,
         icon: "success",
       });
+      //almacenar el usuario logueado en el state
+      setUsuarioLogueado(usuario.email)
       //redireccionar a la pagina del administrador
       navegacion('/administrador')
     }else{
