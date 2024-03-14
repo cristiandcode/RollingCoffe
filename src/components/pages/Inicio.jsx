@@ -12,6 +12,11 @@ const Inicio = () => {
   const leerProductosInicio = async () => {
     try {
       const productosAPIinicio = await leerProductosAPI();
+      // * corregir error cuando no se reciben la lista de productos desde el backend
+      if(!productosAPIinicio){
+        return setProductosInicio([])
+      }
+     
       setProductosInicio(productosAPIinicio);
     } catch (error) {
       console.log(error);
@@ -31,7 +36,7 @@ const Inicio = () => {
     
           <Row>
          {
-          productos.map((producto)=>  <CardProducto key={producto.id} producto={producto}></CardProducto>)
+          productos.map((producto)=>  <CardProducto key={producto._id} producto={producto}></CardProducto>)
          }
           </Row>
        
