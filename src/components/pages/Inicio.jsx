@@ -14,6 +14,7 @@ const Inicio = () => {
       const productosAPIinicio = await leerProductosAPI();
       // * corregir error cuando no se reciben la lista de productos desde el backend
       if(!productosAPIinicio){
+        //aqui muestro el mensaje
         return setProductosInicio([])
       }
      
