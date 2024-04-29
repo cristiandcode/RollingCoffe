@@ -1,12 +1,12 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../../assets/Coffee_Logo.png";
-// import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Menu = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">
           <img
             src={logo}
             alt="logo Rolling Coffee"
@@ -17,18 +17,18 @@ const Menu = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link end className="nav-link" to="/">
+            <NavLink end className="nav-link" to="/">
               Inicio
-            </Nav.Link>
-            <Nav.Link end className="nav-link" to="/administrador">
+            </NavLink>
+            <NavLink end className="nav-link" to="/administrador">
               Administrador
-            </Nav.Link>
-            <Nav.Link end className="nav-link" to="/login">
+            </NavLink>
+            <NavLink end className="nav-link" to="/login">
               Login
-            </Nav.Link>
-            <Nav.Link end className="nav-link" to="/registro">
+            </NavLink>
+            <NavLink end className="nav-link" to="/registro">
               Registro
-            </Nav.Link>
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
