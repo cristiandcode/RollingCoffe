@@ -4,31 +4,7 @@ import { useParams } from "react-router-dom";
 import { obtenerProductoAPI } from "../../helpers/queries";
 import Swal from "sweetalert2";
 
-
 const DetalleProducto = () => {
-const {id} = useParams();
-const [producto, setProducto] = useState({});
-
-useEffect(()=>{
-  //buscar el producto que quiero maquetar
-  cargarDetalle();
-},[])
-
-const cargarDetalle = async()=>{
-  const respuesta = await obtenerProductoAPI(id)
-  if(respuesta.status === 200){
-    //mostrar el producto en la card
-    const datoProducto = await respuesta.json();
-    setProducto(datoProducto);
-  }else{
-    Swal.fire({
-      title: "Ocurrio un error",
-      text: "Intente realizar esta operacion en unos minutos",
-      icon: "error",
-    });
-  }
-}
-
   return (
     <Container className="my-3 mainSection">
       <Card>
@@ -36,21 +12,33 @@ const cargarDetalle = async()=>{
           <Col md={6}>
             <Card.Img
               variant="top"
-              src={producto.imagen}
-              alt={producto.nombreProducto}
+              src="https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg"
+              alt="Medialuna"
             />
           </Col>
           <Col md={6}>
             <Card.Body>
-              <Card.Title className="primary-font">{producto.nombreProducto}</Card.Title>
-              <hr />
+              <Card.Title className="primary-font">Medialuna</Card.Title>
+
               <Card.Text>
-              {producto.descripcion_amplia}
-              <br/>
-              <br/>
-              <span className="primary-font fw-semibold ">Categoria:</span> {producto.categoria}
-              <br className='mb-3'/>
-              <span className="primary-font fw-semibold ">Precio: ${producto.precio}</span></Card.Text>
+                Sumérgete en el deleite irresistible de nuestras medialunas
+                artesanales, donde la suavidad de la masa se encuentra con la
+                indulgencia del sabor. Con una mezcla perfecta de tradición y
+                pasión, cada medialuna es una obra maestra horneada que seduce
+                tus sentidos con cada bocado. Desde las clásicas de manteca
+                hasta las exquisitas de chocolate, cada opción es una invitación
+                a un mundo de placer culinario. Elige calidad, elige sabor,
+                elige nuestras medialunas para una experiencia única en cada
+                momento del día.
+                <br />
+                <br />
+                <span className="primary-font fw-semibold ">
+                  Categoria:
+                </span>{" "}
+                Dulce
+                <br className="mb-3" />
+                <span className="primary-font fw-semibold ">Precio: $400</span>
+              </Card.Text>
             </Card.Body>
           </Col>
         </Row>
