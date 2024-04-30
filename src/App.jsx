@@ -7,6 +7,7 @@ import Inicio from "./components/pages/Inicio";
 import Administrador from "./components/pages/Administrador";
 import Error404 from "./components/pages/Error404";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./components/pages/Login";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         ></Route>
         <Route exact
           path="/login"
-          element={<Administrador></Administrador>}
+          element={<Login></Login>}
         ></Route>
         <Route exact
           path="/detalle"
