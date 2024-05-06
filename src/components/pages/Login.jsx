@@ -1,5 +1,9 @@
 import { Container, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { login } from "../helpers/queries";
+import Swal from 'sweetalert2'
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
   const {
@@ -7,9 +11,27 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const navegacion = useNavigate();
 
   const onSubmit = (usuario) => {
     console.log(usuario);
+    if(login(usuario)){
+      //aqui el usuario ya esta logueado
+      Swal.fire({
+        title: "Usuario logueado",
+        text: `Bienvenido ${usuario.email} a rollingCoffee`,
+        icon: "success"
+      });
+      //redireccionar
+      navegacion('/administrador')
+    }else{
+      //credenciales incorrectas
+      Swal.fire({
+        title: "Error en el login",
+        text: "Email o contraseña incorrecta",
+        icon: "error"
+      });
+    }
   };
 
   return (
