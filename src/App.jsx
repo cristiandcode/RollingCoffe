@@ -9,6 +9,7 @@ import FormularioProducto from "./components/pages/producto/FormularioProducto";
 import Error404 from "./components/pages/Error404";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/pages/Login";
+import CardProducto from "./components/pages/producto/CardProducto";
 
 function App() {
   return (
@@ -20,6 +21,16 @@ function App() {
           exact
           path="/administrador"
           element={<Administrador></Administrador>}
+        ></Route>
+        <Route
+          exact
+          path="/administrador/crear"
+          element={<FormularioProducto></FormularioProducto>}
+        ></Route>
+        <Route
+          exact
+          path="/administrador/editar"
+          element={<FormularioProducto></FormularioProducto>}
         ></Route>
         <Route exact path="/login" element={<Login></Login>}></Route>
         <Route
