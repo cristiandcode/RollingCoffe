@@ -10,11 +10,15 @@ import Error404 from "./components/pages/Error404";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/pages/Login";
 import CardProducto from "./components/pages/producto/CardProducto";
+import { useState } from "react";
 
 function App() {
+  const usuario = JSON.parse(sessionStorage.getItem('usuarioRollingCoffee')) || '';
+  const [usuarioLogueado, setUsuarioLogueado] = useState(usuario)
+
   return (
     <BrowserRouter>
-      <Menu></Menu>
+      <Menu usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></Menu>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
         <Route
@@ -32,7 +36,7 @@ function App() {
           path="/administrador/editar"
           element={<FormularioProducto></FormularioProducto>}
         ></Route>
-        <Route exact path="/login" element={<Login></Login>}></Route>
+        <Route exact path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}></Route>
         <Route
           exact
           path="/detalle"

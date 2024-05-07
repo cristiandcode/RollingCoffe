@@ -1,8 +1,19 @@
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, Button } from "react-bootstrap";
 import logo from "../../assets/Coffee_Logo.png";
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
-const Menu = () => {
+const Menu = ({ usuarioLogueado,setUsuarioLogueado }) => {
+const navegacion = useNavigate();
+
+const logout = ()=>{
+  //1- resetear el sessionStorage
+  sessionStorage.removeItem('usuarioRollingCoffee')
+  //2- actualizar el state
+  setUsuarioLogueado('');
+  //3- redireccionar al login o inicio
+  navegacion('/')
+}
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
@@ -20,15 +31,26 @@ const Menu = () => {
             <NavLink end className="nav-link" to="/">
               Inicio
             </NavLink>
-            <NavLink end className="nav-link" to="/administrador">
-              Administrador
-            </NavLink>
-            <NavLink end className="nav-link" to="/login">
-              Login
-            </NavLink>
-            <NavLink end className="nav-link" to="/registro">
-              Registro
-            </NavLink>
+            {
+              //hay alguien logueado
+              usuarioLogueado.length > 0 ? (
+                <>
+                  <NavLink end className="nav-link" to="/administrador">
+                    Administrador
+                  </NavLink>
+                  <Button variant="link" className="nav-link" onClick={logout}>logout</Button>
+                </>
+              ) : (
+                <>
+                  <NavLink end className="nav-link" to="/login">
+                    Login
+                  </NavLink>
+                  <NavLink end className="nav-link" to="/registro">
+                    Registro
+                  </NavLink>
+                </>
+              )
+            }
           </Nav>
         </Navbar.Collapse>
       </Container>

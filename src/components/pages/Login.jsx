@@ -5,7 +5,7 @@ import Swal from 'sweetalert2'
 import { useNavigate } from "react-router-dom";
 
 
-const Login = () => {
+const Login = ({setUsuarioLogueado}) => {
   const {
     register,
     handleSubmit,
@@ -22,6 +22,8 @@ const Login = () => {
         text: `Bienvenido ${usuario.email} a rollingCoffee`,
         icon: "success"
       });
+      //actualizar el state
+      setUsuarioLogueado(usuario.email)
       //redireccionar
       navegacion('/administrador')
     }else{
