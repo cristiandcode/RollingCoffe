@@ -11,6 +11,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/pages/Login";
 import CardProducto from "./components/pages/producto/CardProducto";
 import { useState } from "react";
+import ListaRutasAdmin from "./components/routes/ListaRutasAdmin";
+import RutasProtegidas from "./components/routes/RutasProtegidas";
 
 function App() {
   const usuario = JSON.parse(sessionStorage.getItem('usuarioRollingCoffee')) || '';
@@ -23,19 +25,13 @@ function App() {
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
         <Route
           exact
-          path="/administrador"
-          element={<Administrador></Administrador>}
+          path="/administrador/*"
+          element={
+          <RutasProtegidas>
+            <ListaRutasAdmin></ListaRutasAdmin>
+          </RutasProtegidas>}
         ></Route>
-        <Route
-          exact
-          path="/administrador/crear"
-          element={<FormularioProducto></FormularioProducto>}
-        ></Route>
-        <Route
-          exact
-          path="/administrador/editar"
-          element={<FormularioProducto></FormularioProducto>}
-        ></Route>
+       
         <Route exact path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}></Route>
         <Route
           exact
