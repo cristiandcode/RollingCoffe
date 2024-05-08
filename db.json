@@ -1,0 +1,13 @@
+{
+    "productos":[
+        {
+            "nombreProducto": "café",
+            "precio": 300,
+            "imagen": "",
+            "categoria":"Infusiones",
+            "descripcion_breve": "sdfsd",
+            "descripcion_amplia": "ddddddddddd sssssss",
+            "id": "1"
+        }
+    ]
+}
