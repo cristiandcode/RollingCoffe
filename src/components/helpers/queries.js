@@ -27,6 +27,15 @@ export const listarProductos = async () => {
     console.error(error);
   }
 };
+//GET
+export const obtenerProducto = async (id) => {
+  try {
+    const respuesta = await fetch("http://localhost:3000/productos/"+id);
+    return respuesta;
+  } catch (error) {
+    console.error(error);
+  }
+};
 
 //POST
 export const crearProducto = async (productoNuevo) => {

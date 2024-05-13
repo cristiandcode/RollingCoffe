@@ -17,7 +17,7 @@ const ListaRutasAdmin = () => {
       ></Route>
       <Route
         exact
-        path="/editar"
+        path="/editar/:id"
         element={<FormularioProducto creando={false}></FormularioProducto>}
       ></Route>
     </Routes>
