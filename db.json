@@ -19,13 +19,13 @@
       "id": "c4ac"
     },
     {
-      "id": "a49e",
       "nombreProducto": "te verde",
-      "precio": "700",
+      "precio": "1000",
       "imagen": "https://img.freepik.com/foto-gratis/placa-madera-hoja-objeto-alimentacion-saludable_1172-451.jpg",
       "categoria": "Infusiones",
       "descripcion_breve": "Una bebida de origen Chino",
-      "descripcion_amplia": "Se deriva de las hojas de la planta Camellia sinensis y es apreciado tanto por su sabor refrescante como por sus innumerables beneficios para la salud, lo que lo convierte en una elección cada vez más popular."
+      "descripcion_amplia": "Se deriva de las hojas de la planta Camellia sinensis y es apreciado tanto por su sabor refrescante como por sus innumerables beneficios para la salud, lo que lo convierte en una elección cada vez más popular.",
+      "id": "a49e"
     },
     {
       "id": "5b39",
@@ -37,13 +37,13 @@
       "descripcion_amplia": "Brownie, helado de chocolate c/nuez , pionono, dulce de leche repostero y ganache de chocolate"
     },
     {
-      "id": "3680",
       "nombreProducto": "Tostado mixto",
-      "precio": "3000",
-      "imagen": "https://pics.filmaffinity.com/ghostbusters_frozen_empire-289306563-large.jpg",
+      "precio": "3200",
+      "imagen": "https://images.pexels.com/photos/5586268/pexels-photo-5586268.jpeg",
       "categoria": "Sandwich",
       "descripcion_breve": "tostado de jamon y queso",
-      "descripcion_amplia": "tostado de jamon y queso rico ss"
+      "descripcion_amplia": "tostado de jamon y queso rico ss",
+      "id": "3680"
     }
   ]
 }
