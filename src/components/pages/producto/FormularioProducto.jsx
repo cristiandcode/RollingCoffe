@@ -19,7 +19,7 @@ const navegacion = useNavigate();
   useEffect(() => {
     //verificar si estoy editando
     if (creando === false) {
-      cargarProducto()
+      const { id } = useParams();
     }
   }, []);
 
