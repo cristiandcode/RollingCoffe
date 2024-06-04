@@ -20,6 +20,25 @@ export const login = (usuario) => {
   }
 };
 
+//nuevo login usando el backend
+// export const login = async (usuario) =>{
+//   try {
+//     console.log(usuario);
+//     const respuesta = await fetch(URL_Usuario, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(usuario),
+//     });
+
+//     return  respuesta
+//   } catch (error) {
+//     console.log("errores en el login");
+//      return { error: "Error en el login" };
+//   }
+// }
+
 //GET
 export const listarProductos = async () => {
   try {

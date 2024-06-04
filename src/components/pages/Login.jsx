@@ -14,7 +14,35 @@ const Login = ({setUsuarioLogueado}) => {
   const navegacion = useNavigate();
 
   const onSubmit = (usuario) => {
-    console.log(usuario);
+    // const respuesta = await login(usuario);
+    // try {
+    //   if (respuesta.status === 200) {
+    //     Swal.fire(
+    //       "¡Bienvenido!",
+    //       "Has iniciado sesión correctamente",
+    //       "success"
+    //     );
+    //     const datos = await respuesta.json();
+    //     sessionStorage.setItem(
+    //       "usuarioRollingCoffee",
+    //       JSON.stringify({ email: datos.email, token: datos.token })
+    //     );
+    //     setUsuarioLogueado(datos);
+    //     navegacion("/administrador");
+    //   } else {
+    //     Swal.fire(
+    //       "Ocurrió un error",
+    //       "Correo o contraseña incorrectos",
+    //       "error"
+    //     );
+    //   }
+    // } catch (error) {
+    //   Swal.fire(
+    //     "Ocurrió un error",
+    //     "Error procesando la respuesta del servidor",
+    //     "error"
+    //   );
+    // }
     if(login(usuario)){
       //aqui el usuario ya esta logueado
       Swal.fire({
