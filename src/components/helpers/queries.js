@@ -43,7 +43,8 @@ export const crearProducto = async (productoNuevo) => {
     const respuesta = await fetch(URIProductos,{
         method: "POST",
         headers:{
-            "Content-Type":"application/json"
+            "Content-Type":"application/json",
+            "x-token": JSON.parse(sessionStorage.getItem('usuarioRollingCoffee')).token
         },
         body: JSON.stringify(productoNuevo)
     });
@@ -56,7 +57,10 @@ export const crearProducto = async (productoNuevo) => {
 export const eliminarProductoAPI = async (id) => {
   try {
     const respuesta = await fetch(URIProductos+id,{
-        method: "DELETE"
+        method: "DELETE",
+        headers:{
+          "x-token": JSON.parse(sessionStorage.getItem('usuarioRollingCoffee')).token
+        }
     });
     return respuesta
   } catch (error) {
@@ -70,7 +74,8 @@ export const editarProducto = async (productoActualizado, id) => {
     const respuesta = await fetch(URIProductos+id,{
         method: "PUT",
         headers:{
-            "Content-Type":"application/json"
+            "Content-Type":"application/json",
+            "x-token": JSON.parse(sessionStorage.getItem('usuarioRollingCoffee')).token
         },
         body: JSON.stringify(productoActualizado)
     });
