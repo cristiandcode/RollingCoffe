@@ -16,7 +16,7 @@ import ListaRutasAdmin from "./components/routes/ListaRutasAdmin";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 
 function App() {
-  const usuario = JSON.parse(sessionStorage.getItem('usuarioRollingCoffee')) || '';
+  const usuario = JSON.parse(sessionStorage.getItem('usuarioRollingCoffee')) || {};
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuario)
 
   return (

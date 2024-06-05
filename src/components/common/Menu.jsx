@@ -9,7 +9,7 @@ const logout = ()=>{
   //1- resetear el sessionStorage
   sessionStorage.removeItem('usuarioRollingCoffee')
   //2- actualizar el state
-  setUsuarioLogueado('');
+  setUsuarioLogueado({});
   //3- redireccionar al login o inicio
   navegacion('/')
 }
@@ -33,7 +33,7 @@ const logout = ()=>{
             </NavLink>
             {
               //hay alguien logueado
-              usuarioLogueado.length > 0 ? (
+              usuarioLogueado.email ? (
                 <>
                   <NavLink end className="nav-link" to="/administrador">
                     Administrador
