@@ -1,4 +1,4 @@
-import { Button, Table } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import ItemProducto from "./producto/ItemProducto";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -45,7 +45,7 @@ const obtenerProductos = async()=>{
         </thead>
         <tbody>
           {
-            productos.map((itemProducto)=> <ItemProducto key={itemProducto.id} producto={itemProducto} setProductos={setProductos}></ItemProducto>)
+            productos.map((itemProducto)=> <ItemProducto key={itemProducto._id} producto={itemProducto} setProductos={setProductos}></ItemProducto>)
           }
         </tbody>
       </Table>
