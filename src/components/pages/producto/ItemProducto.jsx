@@ -56,7 +56,7 @@ const ItemProducto = ({ producto, setProductos }) => {
       </td>
       <td>{producto.categoria}</td>
       <td className="text-center">
-        <Link className="me-lg-2 btn btn-warning" to={'/administrador/editar/'+ producto._id }>
+        <Link className="me-lg-2 btn btn-warning" to={'/administrador/editar/'+ producto.id }>
           <i className="bi bi-pencil-square"></i>
         </Link>
         <Button variant="danger">

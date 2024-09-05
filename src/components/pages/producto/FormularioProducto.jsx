@@ -15,13 +15,12 @@ const FormularioProducto = ({ creando }) => {
   } = useForm();
   const { id } = useParams();
 
-
 const navegacion = useNavigate();
 
   useEffect(() => {
     //verificar si estoy editando
     if (creando === false) {
-      cargarProducto();
+      const { id } = useParams();
     }
   }, []);
 
