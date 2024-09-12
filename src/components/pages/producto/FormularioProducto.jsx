@@ -15,6 +15,7 @@ const FormularioProducto = ({ creando }) => {
   } = useForm();
   const { id } = useParams();
 
+
 const navegacion = useNavigate();
 
   useEffect(() => {
