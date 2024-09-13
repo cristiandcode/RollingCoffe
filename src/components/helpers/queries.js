@@ -1,25 +1,22 @@
-const userAdmin = {
-  email: "admin@rollingcoffee.com",
-  password: "123Aa123",
-};
-
-
 const URIProductos = import.meta.env.VITE_API_PRODUCTOS;
+const URL_Usuario = import.meta.env.VITE_API_USUARIO;
 
-export const login = (usuario) => {
-  if (
-    usuario.email === userAdmin.email &&
-    usuario.password === userAdmin.password
-  ) {
-    sessionStorage.setItem(
-      "usuarioRollingCoffee",
-      JSON.stringify(userAdmin.email)
-    );
-    return true;
-  } else {
-    return false;
+//nuevo login usando el backend
+export const login = async (usuario) =>{
+  try {
+    const respuesta = await fetch(URL_Usuario, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(usuario),
+    });
+    return  respuesta
+  } catch (error) {
+    console.error(error);
+    return { error: "Error en el login" };
   }
-};
+}
 
 //GET
 export const listarProductos = async () => {
@@ -46,7 +43,8 @@ export const crearProducto = async (productoNuevo) => {
     const respuesta = await fetch(URIProductos,{
         method: "POST",
         headers:{
-            "Content-Type":"application/json"
+            "Content-Type":"application/json",
+            "x-token": JSON.parse(sessionStorage.getItem('usuarioRollingCoffee')).token
         },
         body: JSON.stringify(productoNuevo)
     });
@@ -59,7 +57,10 @@ export const crearProducto = async (productoNuevo) => {
 export const eliminarProductoAPI = async (id) => {
   try {
     const respuesta = await fetch(URIProductos+id,{
-        method: "DELETE"
+        method: "DELETE",
+        headers:{
+          "x-token": JSON.parse(sessionStorage.getItem('usuarioRollingCoffee')).token
+        }
     });
     return respuesta
   } catch (error) {
@@ -73,7 +74,8 @@ export const editarProducto = async (productoActualizado, id) => {
     const respuesta = await fetch(URIProductos+id,{
         method: "PUT",
         headers:{
-            "Content-Type":"application/json"
+            "Content-Type":"application/json",
+            "x-token": JSON.parse(sessionStorage.getItem('usuarioRollingCoffee')).token
         },
         body: JSON.stringify(productoActualizado)
     });
