@@ -41,7 +41,7 @@ const navegacion = useNavigate();
   };
 
   const productoValidado = async (producto) => {
-    console.log(producto);
+    
     if (creando) {
       //tengo que pedir a la api crear un producto
       const respuesta = await crearProducto(producto);
