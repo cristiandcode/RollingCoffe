@@ -49,7 +49,7 @@ const Login = ({setUsuarioLogueado}) => {
   };
 
   return (
-    <Container className="my-5 mainSection">
+    <Container className="my-5">
       <h1 className="mb-5">Ingresa al sitio</h1>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
